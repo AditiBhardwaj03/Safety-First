@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static\css\login.css">
+</head>
+<body>
+    <section class="login">
+    <div class="center">
+        <!--====== -------  ye logo lgaana h user log in p ----------------------------->
+
+        <!-- <div class="dp_logo">
+            <img src="/static/img/delhip_logo.png" alt="">
+        </div> -->
+        
+        <h1>Login User</h1>
+        <form class="login_form" method="post"  action="C:\Users\Mansi Rohilla\Desktop\safety first\home.html" name="form1" onsubmit="return validation" >
+            <div class="txt_field" >
+                <input type="text" id="name" name="email">
+                <span></span>
+                <label>Email or Username</label>
+            </div>
+            <div id="email_error"> Please fill your username</div>
+            <div class="txt_field">
+                <input type="password"  id="passw" name="password" >
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div id="pass_error"> Please fill your Password</div>
+            <br>
+            <div class="pass">Forgot Password ?</div>
+
+            <input type="submit" value="Login">
+            <div class="signup_link">
+            <div class="signup_link">
+                Not a member? <a href="#">Signup</a>
+            </div>
+        </form>
+    </div>
+</section>
+    
+</body>
+
+<script>
+var name = document.getElementById('name');
+var passw = document.getElementById('passw');
+// var name = document.forms['form1']['email']
+// var passw = document.forms['form1']['password']
+
+var email_errror = document.getElementById('email_error');
+var pass_errror = document.getElementById('pass_error');
+
+email.addEventListner('textInput', email_verify);
+password.addEventListner('textInput', passw_verify);
+
+function validation(){
+    if(name.value.length < 9){
+        // email.style.border="1px solid red";
+        email_error.style.display = "block";
+        
+        return false;
+    
+    }
+
+    else if(passw.value.length < 6){
+        // pass.style.border="1px solid red";
+        pass_error.style.display ="block";
+       
+        return false;
+    }
+
+    function email_Verify(){
+        if(email.value.length >=8){
+            email_error.style.display = "none";
+            return true;
+        }
+
+    function passw_Verify(){
+        if(passw.value.length >=8){
+           pass_error.style.display = "none";
+            return true;
+        }
+    }
+}
+}
+ 
+</script>
+</html>
