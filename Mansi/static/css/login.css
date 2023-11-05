@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: montserrat;
-    background-image: linear-gradient(rgb(20 21 39 / 70%),rgba(1,1,15,70%)),url("/static/img/dpolice.png");
+    background-image: linear-gradient(rgba(30, 31, 58, 0.5),rgba(29, 3, 4, 0.5)),url("/static/img/dpolice.png");
 
     background-position :center;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@ form .txt_field{
 
 .txt_field label{
     position: absolute;
-    top: 50%;
+    top:0%;
     left: 50%;
     /* margin-left: 0; */
     color: #adadad;
@@ -98,7 +98,7 @@ form .txt_field{
 
 }
 
-input[type="submit"]{
+button{
 
     width: 100%;
     height: 50px;
@@ -112,7 +112,7 @@ input[type="submit"]{
     outline: none;
 }
 
-input[type="submit"]:hover{
+button:hover{
    background-color: #071325;
     transition: .5s;
 }
@@ -134,8 +134,4 @@ input[type="submit"]:hover{
 .signup_link a:hover{
     text-decoration: underline;
 }
-.login_form #email_error,
-.login_form #pass_error{
-    color: #C62828;
-    display: none;
-}
+
